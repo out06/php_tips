@@ -6,7 +6,7 @@
 
 function pmt($rate, $periods, $present, $future=0, $type=0){
     if(!is_numeric($rate) || !is_numeric($periods)){
-        return 'should be number';
+        return 0;
     }
 
     if($rate == 0){
@@ -29,7 +29,7 @@ function pmt($rate, $periods, $present, $future=0, $type=0){
 
 function fv($rate, $periods, $payment, $value=0, $type=0){
     if( empty($periods)){
-        return 'empty';
+        return 0;
     }
 
     if($rate == 0){
